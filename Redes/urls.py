@@ -1,17 +1,17 @@
+from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path
-from RedesProyecto.views import login_usuario, abrir, luces, cerrar, preguntar_estado, apagar_luces, get_datos, \
-    logout_view, get_salas
+
+from RedesProyecto.views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('login/', login_usuario),
-    path('abrir_salon/', abrir),
-    path('luces/', luces),
-    path('apagar_luces/', apagar_luces),
-    path('cerrar/', cerrar),
-    path('consultar/', preguntar_estado),
-    path('datos/', get_datos),
-    path('logout_view/', logout_view),
-    path('get_salas/', get_salas),
+    url(r'^admin/', admin.site.urls),
+    url(r'^login/', login_usuario),
+    url(r'^abrir_salon/', abrir),
+    url(r'^luces/', luces),
+    url(r'^apagar_luces/', apagar_luces),
+    url(r'^cerrar/', cerrar),
+    url(r'^consultar/', preguntar_estado),
+    url(r'^datos/', get_datos),
+    url(r'^logout_view/', logout_view),
+    url(r'^get_salas/', get_salas),
 ]
